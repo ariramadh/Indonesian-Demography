@@ -32,16 +32,22 @@ aOld = []
 for i, link in enumerate(links):
 	if i in range(0, len(links), 4):
 		tahun.append(link.get_text()[:-1])
+	# if i in range(1, len(links), 4):
+	# 	aYou.append(sub(',','.',link.get_text()[:-1]))
+	# if i in range(2, len(links), 4):
+	# 	aMid.append(sub(',','.',link.get_text()[:-1]))
+	# if i in range(3, len(links), 4):
+	# 	aOld.append(sub(',','.',link.get_text()[:-1]))
 	if i in range(1, len(links), 4):
-		aYou.append(sub(',','.',link.get_text()[:-1]))
+		aYou.append(link.get_text()[:-1])
 	if i in range(2, len(links), 4):
-		aMid.append(sub(',','.',link.get_text()[:-1]))
+		aMid.append(link.get_text()[:-1])
 	if i in range(3, len(links), 4):
-		aOld.append(sub(',','.',link.get_text()[:-1]))
+		aOld.append(link.get_text()[:-1])
 
 #buatlah DataFrame dan masukkan ke CSV
 df = pd.DataFrame()
-df['Tahun Sensur'] = tahun
+df['Tahun Sensus'] = tahun
 df['0-14 tahun'] = aYou
 df['15-64 tahun'] = aMid
 df['+ 65 tahun'] = aOld

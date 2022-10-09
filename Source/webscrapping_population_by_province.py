@@ -23,7 +23,7 @@ populasi20 = []
 #memasukkan data ke dalam list berdasarkan pola HTML
 for i, link in enumerate(links):
 	if i in range(0, len(links), 4):
-		nama.append(link.get_text()[:-1])
+		nama.append(link.get_text().upper()[:-1])
 	if i in range(1, len(links), 4):
 		luas_km.append(link.get_text()[:-1])
 	if i in range(2, len(links), 4):
