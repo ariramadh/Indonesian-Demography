@@ -37,7 +37,5 @@ df['Nama Provinsi'] = nama
 df['Luas km'] = luas_km
 df['Populasi 2010'] = populasi10
 df['Populasi 2020'] = populasi20
-
-#Simpan kedalam file CSV
 df.to_csv('Population_by_Province.csv' , index=False, encoding='utf-8', quoting=1)
 print(df)
